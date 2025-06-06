@@ -28,7 +28,12 @@ function extrairElemento(doc){
 }
 
 function main(){
-    document.querySelector("#btn").addEventListener("click",Req)
+    document.querySelector("#btn")
+    .addEventListener("click", () => { 
+        Req();
+        document.getElementById("res").style.display = "block";
+        window.scrollTo({ top: document.getElementById("res").offsetTop - 20, behavior: 'smooth' });
+    });
 }
 
 window.onload = main
